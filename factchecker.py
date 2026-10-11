@@ -10,7 +10,7 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
 )
 topic = input("Enter the topic you would like to search: ")
-prompt = f"Find out a cool fact about {topic}."
+prompt = f"Find out a really cool fact about {topic}. Keep it short."
 response = client.chat.completions.create(
     model="openai/gpt-oss-120b",
     messages=[

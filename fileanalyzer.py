@@ -9,7 +9,7 @@ client = OpenAI(
 )
 filename = input("What is the name of the dataset you would like to analyze? ")
 file = open(f"{filename}")
-prompt = f"Analyze and find patterns in {file.read()}. Do not rewrite the script at all, just provide a basic summary of the file."
+prompt = f"Analyze and find patterns in {file.read()}. Do not rewrite the script at all, just provide a basic summary of the file. Keep it minimal."
 response = client.chat.completions.create(
     model="llama-3.3-70b-versatile",
     messages=[
